@@ -43,7 +43,7 @@ This is a web-based financial calculator app built with HTML, CSS, and JavaScrip
 
 ## Diagram:
 
-![Diagram](https://github.com/GitExplorer001/Weather-APP/blob/main/Diagram.png)
+![Diagram](https://github.com/GitExplorer001/Financial_Calculator/blob/main/financial_diagram.png)
 
 ## Technologies Used
 - HTML5
