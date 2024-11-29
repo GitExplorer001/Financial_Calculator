@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="icon.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Financial Calculator
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="emi.html">EMI Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rd.html">RD Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fd.html">FD Calculator</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="text-center mx-auto">
+        <h1 class="mb-4 d-inline-block">
+            Welcome to the Financial Calculator
+            <span class="d-block text-end" style="font-size: 0.8rem;">~ Designed by <a href="https://www.linkedin.com/in/anish-ghosh-ag743/">Anish Ghosh</a></span>
+        </h1>
+    </div>
+    <p class="text-center mb-5">Choose a calculator below to start calculating your financial investments.</p>
+    
+    <!-- Tiles -->
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-lg-3">
+        <div class="tile" onclick="location.href='emi.html'">
+          <h3>EMI Calculator</h3>
+          <p>Calculate your monthly EMI based on loan amount, interest rate, and tenure.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="tile" onclick="location.href='rd.html'">
+          <h3>RD Calculator</h3>
+          <p>Calculate your recurring deposit maturity amount based on monthly investment, interest rate, and tenure.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="tile" onclick="location.href='fd.html'">
+          <h3>FD Calculator</h3>
+          <p>Calculate your fixed deposit maturity amount based on principal, interest rate, and tenure.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Instructions Section -->
+    <div class="instructions">
+      <h2 class="text-center mb-4">How to Use Each Calculator</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">EMI Calculator</h5>
+              <p class="card-text">You can fill any 3 of the 4 fields, Principal amount, Rate of interest, Time period and EMI. The calculator will show the remaining field, total interest, and total amount payable including a pie chart. Please make sure to select the unit for Time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">RD Calculator</h5>
+              <p class="card-text">Enter your monthly investment amount, interest rate, and tenure for the RD calculator. You can also choose the compounding frequency (monthly, quarterly, etc.). The calculator will show your total investment, interest earned, and maturity amount including a pie chart. Please make sure to select the unit for Time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">FD Calculator</h5>
+              <p class="card-text">For FD calculation, input your initial investment amount, the annual interest rate, and the tenure. You can select the compounding period (monthly, quarterly, annually). The calculator will display your maturity amount and the interest earned including a pie chart. Please make sure to select the unit for Time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

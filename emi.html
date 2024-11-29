@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Custom styles -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="icon.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Financial Calculator
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="emi.html">EMI Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rd.html">RD Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fd.html">FD Calculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">EMI Calculator</h1>
+        <h3 class="text-center mb-4 header" id="emi-header" style="display: none;"></h3>
+        
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="emi-principal" class="form-label">Principal Amount</label>
+                <input type="number" id="emi-principal" class="form-control" placeholder="Enter principal amount (min 1000)" min="1000">
+            </div>
+            
+            <div class="col-md-6 mb-3">
+                <label for="emi-rate" class="form-label">Rate of Interest (%)</label>
+                <input type="number" id="emi-rate" class="form-control" placeholder="Enter rate of interest">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="emi-time" class="form-label">Time Period</label>
+                <input type="number" id="emi-time" class="form-control" placeholder="Enter time period">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="emi-time-unit" class="form-label">Time Unit</label>
+                <select id="emi-time-unit" class="form-select">
+                    <option value="years" selected>Years</option>
+                    <option value="months">Months</option>
+                    <option value="weeks">Weeks</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">       
+            <div class="col-md-6 mb-3">
+                <label for="emi-amount" class="form-label">EMI</label>
+                <input type="number" id="emi-amount" class="form-control" placeholder="EMI Amount">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-12 mb-3">
+                <button id="emi-calculate" class="btn btn-primary">Calculate</button>
+                <button id="emi-reset" class="btn btn-danger ms-2">Reset</button>
+            </div>
+        </div>
+
+        <!-- Results Section with Pie Chart -->
+        <div id="emi-results" class="mt-4" style="display: none;">
+            <h3>Loan Details</h3>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <ul class="list-group">
+                        <li class="list-group-item"><b id="emi-time-display">Monthly</b> EMI: <span id="emi-monthly-amount"></span></li>
+                        <li class="list-group-item">Principal Amount: <span id="emi-principal-amount"></span></li>
+                        <li class="list-group-item">Interest Amount: <span id="emi-interest-amount"></span></li>
+                        <li class="list-group-item">Total Amount: <span id="emi-total-amount"></span></li>
+                    </ul>
+                </div>
+                
+                <!-- Pie Chart Container -->
+                <div class="col-md-6 mb-3">
+                    <div id="emi-pie-chart-container" class="d-flex flex-column align-items-center" style="display: none;">
+                        <div class="pie-chart" id="emi-pie-chart"></div>
+                        <div class="color-boxes mt-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="color-box me-2" style="background-color: #25bf25;"></div>
+                                <span>Principal</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="color-box me-2" style="background-color: #e64141;"></div>
+                                <span>Interest</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #343a40;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+  .tile {
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    margin: 15px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  }
+  .tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
+  }
+  .tile h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    color: #007bff;
+  }
+  .tile p {
+    font-size: 1em;
+    color: #6c757d;
+  }
+  .instructions {
+    margin-top: 40px;
+  }
+  .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
+  }
+  .card-title {
+    color: #007bff;
+  }
+
+.card {
+    border-radius: 12px;
+    border: none;
+    background-color: #ffffff;
+}
+
+button {
+    font-size: 1rem;
+}
+
+#results {
+    display: none;
+}
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--slice1-color, #25bf25) var(--slice1-end, 0%) var(--slice1-end, 0%), var(--slice2-color, #e64141) var(--slice1-end, 0%) 100%);
+}
+
+.color-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+@media (max-width: 768px) {
+    .pie-chart {
+        width: 150px;
+        height: 150px;
+    }
+
+    .color-boxes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+.form-control, .form-select {
+    font-size: 0.9rem;
+}
+
+.list-group-item {
+    font-size: 0.9rem;
+    text-align: left;  /* Align the text to the left */
+}
+
+.list-group-item span {
+    float: right;  /* Align the spans to the right */
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #reset {
+        margin-left: 0 !important;
+    }
+}
+.header {
+    font-size: 3rem;           
+    font-weight: bold;      
+    color: #fff;                
+    background-color: #007bff;   
+    padding: 20px;               
+    border-radius: 10px;         
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;     
+    letter-spacing: 1.5px;        
+    margin-bottom: 30px;           
+}
