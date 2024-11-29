@@ -36,8 +36,7 @@ This is a web-based financial calculator app built with HTML, CSS, and JavaScrip
 
 - `index.html`: Main HTML file containing the structure of the page.
 - `styles.css`: CSS file for styling the app.
-- `script.js`: JavaScript file containing the logic and functionality for the calculators.
-- `charts.js`: Optional file for handling the pie chart generation.
+- `script.js`: JavaScript file containing the logic and functionality for the calculators and the pie chart.
 
 ## Technologies Used
 - HTML5
